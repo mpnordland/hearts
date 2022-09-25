@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/Maddy/.nuget/packages/": {}
+    "/home/maddy/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/Maddy/Documents/new Comp Sci/heartspam/heartspam/heartspam.csproj",
+      "projectUniqueName": "/home/maddy/RiderProjects/hearts/heartspam/heartspam/heartspam.csproj",
       "projectName": "heartspam",
-      "projectPath": "/home/Maddy/Documents/new Comp Sci/heartspam/heartspam/heartspam.csproj",
-      "packagesPath": "/home/Maddy/.nuget/packages/",
-      "outputPath": "/home/Maddy/Documents/new Comp Sci/heartspam/heartspam/obj/",
+      "projectPath": "/home/maddy/RiderProjects/hearts/heartspam/heartspam/heartspam.csproj",
+      "packagesPath": "/home/maddy/.nuget/packages/",
+      "outputPath": "/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/Maddy/.nuget/NuGet/NuGet.Config"
+        "/home/maddy/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -49,8 +49,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -59,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/maddy/.dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,3 +13,18 @@
 /home/Maddy/Documents/new Comp Sci/heartspam/heartspam/obj/Debug/net6.0/heartspam.pdb
 /home/Maddy/Documents/new Comp Sci/heartspam/heartspam/obj/Debug/net6.0/heartspam.genruntimeconfig.cache
 /home/Maddy/Documents/new Comp Sci/heartspam/heartspam/obj/Debug/net6.0/ref/heartspam.dll
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/bin/Debug/net6.0/heartspam
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/bin/Debug/net6.0/heartspam.deps.json
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/bin/Debug/net6.0/heartspam.runtimeconfig.json
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/bin/Debug/net6.0/heartspam.dll
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/bin/Debug/net6.0/heartspam.pdb
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/heartspam.csproj.AssemblyReference.cache
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/heartspam.GeneratedMSBuildEditorConfig.editorconfig
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/heartspam.AssemblyInfoInputs.cache
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/heartspam.AssemblyInfo.cs
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/heartspam.csproj.CoreCompileInputs.cache
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/heartspam.dll
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/refint/heartspam.dll
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/heartspam.pdb
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/heartspam.genruntimeconfig.cache
+/home/maddy/RiderProjects/hearts/heartspam/heartspam/obj/Debug/net6.0/ref/heartspam.dll

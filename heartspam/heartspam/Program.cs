@@ -1,44 +1,31 @@
 ﻿using System.Text.RegularExpressions;
 
-Console.WriteLine("how long do you want the spam?");
+var cleanInput = "";
+string[] possibleHearts = {"❤", "🧡", "💛", "💚", "💙", "💜", "🤎", "🖤", "🤍", "💔", "❣", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "💟", "❤️‍🔥", "❤️‍🩹"};
+var rnd = new Random();
 
-bool valid_input = false;
-string clean_input = ""; 
-
-while (!valid_input)
+do
 {
-    string dirty_input = (Console.ReadLine());
-
-    clean_input = Regex.Replace(dirty_input, "[^0-9]", "");
-    
-    if (clean_input != "")
+    Console.WriteLine("how long do you want the spam? (any non digit characters will be ignored)");
+    var input = Console.ReadLine();
+    if (input is not null && input.Any(char.IsDigit))
     {
-        valid_input = true;
+        cleanInput = Regex.Replace(input, "[^0-9]", "");
     }
-    else
-    {
-        Console.WriteLine("enter a number!");
-    }
-}
+    Console.WriteLine(cleanInput + input);
+} while (cleanInput == "");
 
-int len = Convert.ToInt32(clean_input);
+var len = Convert.ToInt32(cleanInput);
+var spam = new string[len];
 
-string[] possible_hearts = {"❤", "🧡", "💛", "💚", "💙", "💜", "🤎", "🖤", "🤍", "💔", "❣", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "💟", "❤️‍🔥", "❤️‍🩹"};
-
-Random rnd = new Random();
-
-string[] spam = new string[len];
-
-int index;
-
-for (int i = 0; i < spam.Length; i++)
+for (var i = 0; i < spam.Length; i++)
 {
-    index = rnd.Next(possible_hearts.Length);
-    spam[i] = possible_hearts[index];
+    var index = rnd.Next(possibleHearts.Length);
+    spam[i] = possibleHearts[index];
 }
 
 Console.WriteLine("your spam is:");
-foreach (string s in spam)
+foreach (var s in spam)
 {
     Console.Write(s);
 }
