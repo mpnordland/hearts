@@ -1,9 +1,10 @@
-namespace heartSpam;
+﻿namespace heartSpam;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 public static class Program
 {
-    public static void Main(string[] args)
+    public static async Task Main(string[] args)
     {
 
         int len;
@@ -14,6 +15,10 @@ public static class Program
             Console.WriteLine($"generating {len} characters of heartspam");
             Console.WriteLine("your spam is:");
         }
+        else if (args[0] == "-")
+        {
+            len = -1;
+        }
         else if (!Int32.TryParse(args[0], out len))
         {
             Console.WriteLine($"{args[0]} is not a valid number. please enter an integer.");
@@ -21,7 +26,22 @@ public static class Program
         }
 
         var heartGenerator = new HeartGenerator();
-        Console.WriteLine(heartGenerator.MakeSpam(len));
+        if (len < 0)
+        {
+            try 
+            {
+                var stdOut = Console.OpenStandardOutput();
+                while (stdOut.CanWrite){
+                    Console.Write(heartGenerator.MakeSpam(20));
+                    await Console.Out.FlushAsync();
+                }
+            }
+            catch (IOException){}
+        }
+        else
+        {
+            Console.WriteLine(heartGenerator.MakeSpam(len));
+        }
 
     }
     static int GetHeartSpamLengthInteractively()
@@ -45,13 +65,5 @@ public static class Program
 
         var len = Convert.ToInt32(cleanInput);
         return len;
-    }
-
-        foreach (var s in output)
-        {
-            Console.Write(s);
-        }
-
-        Console.WriteLine();
     }
 }
