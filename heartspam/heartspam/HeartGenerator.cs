@@ -1,8 +1,10 @@
+using System.Text;
+
 namespace heartSpam;
 
 public class HeartGenerator
 { 
-    public string[] MakeSpam(int len)
+    public string MakeSpam(int len)
     {
         string[] possibleHearts =
         {
@@ -11,14 +13,14 @@ public class HeartGenerator
         };
         var rnd = new Random();
 
-        var spam = new string[len];
+        var spam = new StringBuilder();
 
-        for (var i = 0; i < spam.Length; i++)
+        for (var i = 0; i < len; i++)
         {
             var index = rnd.Next(possibleHearts.Length);
-            spam[i] = possibleHearts[index];
+            spam.Append(possibleHearts[index]);
         }
 
-        return spam;
+        return spam.ToString();
     }
 }

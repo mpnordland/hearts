@@ -1,13 +1,33 @@
-﻿namespace heartSpam;
+namespace heartSpam;
 using System.Text.RegularExpressions;
 
 public static class Program
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
-        var cleanInput = "";
+
+        int len;
+        if (args.Length == 0 || String.IsNullOrWhiteSpace(args[0]))
+        {
+            len = GetHeartSpamLengthInteractively();
+
+            Console.WriteLine($"generating {len} characters of heartspam");
+            Console.WriteLine("your spam is:");
+        }
+        else if (!Int32.TryParse(args[0], out len))
+        {
+            Console.WriteLine($"{args[0]} is not a valid number. please enter an integer.");
+            System.Environment.Exit(-1);
+        }
+
         var heartGenerator = new HeartGenerator();
+        Console.WriteLine(heartGenerator.MakeSpam(len));
+
+    }
+    static int GetHeartSpamLengthInteractively()
+    {
         ConsoleKeyInfo input;
+        var cleanInput = "";
 
         Console.WriteLine("how long do you want the spam? (any non digit characters will be ignored)");
         do
@@ -21,11 +41,11 @@ public static class Program
             }
         } while (input.Key != ConsoleKey.Enter);
         Console.WriteLine(); //Output the enter key
+
+
         var len = Convert.ToInt32(cleanInput);
-
-        var output = heartGenerator.MakeSpam(len);
-
-        Console.WriteLine("your spam is:");
+        return len;
+    }
 
         foreach (var s in output)
         {
