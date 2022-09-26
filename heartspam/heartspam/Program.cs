@@ -1,24 +1,26 @@
 ﻿namespace heartSpam;
 using System.Text.RegularExpressions;
 
-public static class Program {
+public static class Program
+{
     public static void Main()
     {
         var cleanInput = "";
         var heartGenerator = new HeartGenerator();
+        ConsoleKeyInfo input;
 
+        Console.WriteLine("how long do you want the spam? (any non digit characters will be ignored)");
         do
         {
-            Console.WriteLine("how long do you want the spam? (any non digit characters will be ignored)");
-            var input = Console.ReadLine();
-            if (input is not null && input.Any(char.IsDigit))
+            // capture input but don't echo it immediately
+            input = Console.ReadKey(intercept: true);
+            if (char.IsDigit(input.KeyChar))
             {
-                cleanInput = Regex.Replace(input, "[^0-9]", "");
+                cleanInput += input.KeyChar;
+                Console.Write(input.KeyChar);
             }
-
-            Console.WriteLine(cleanInput + input);
-        } while (cleanInput == "");
-
+        } while (input.Key != ConsoleKey.Enter);
+        Console.WriteLine(); //Output the enter key
         var len = Convert.ToInt32(cleanInput);
 
         var output = heartGenerator.MakeSpam(len);
